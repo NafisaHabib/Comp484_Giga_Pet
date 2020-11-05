@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        This is your Giga Pet
+      </h1>
+    </header>
+
+    <main>
+      <section class="pet-image-container" >
+         <!-- Replace pet image with your own pet image -->
+        <img class="pet-image" id="pet-image" src="https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605">
+      </section>
+      <section class="dashboard">
+        <div>Name: <strong><span class="name"></span></strong></div>
+        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
+        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <div>Feelings: <strong><span class="check"></span> (Check my feelings)</strong></div>
+        <div class="button-container">
+          <button class="treat-button"
+             onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2Fjerry_eat.gif?v=1604558492523'" width="480" height="350">
+            Treat
+          </button>
+          <button class="play-button" 
+                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2FAnxiousKaleidoscopicCricket-max-1mb.gif?v=1604561171220'" >
+            Play
+          </button>
+          <button class="exercise-button"
+                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F5deb8d33e8d108a01a935e2868628d95.jpg?v=1604558631261'" >
+            Exercise
+          </button>
+          <button class="song-button"
+                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605'">
+            Song
+            </button>
+                    <button class="check-button"
+                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605'">
+            Check
+            </button>
+        </div>
+                <br>
+        <p id="comment"></p>
+      </section>
+    </main>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+  </body>
+</html>
