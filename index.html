@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Your Giga Pet</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Giga Pet</title>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -18,45 +23,95 @@
     </header>
 
     <main>
-      <section class="pet-image-container" >
-         <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" id="pet-image" src="https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605">
+      <section class="pet-image-container">
+        <!-- Replace pet image with your own pet image -->
+
+        <!-- I had to add a new id to change the images for different buttons -->
+        <img
+          class="pet-image"
+          id="pet-image"
+          src="https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605"
+        />
       </section>
       <section class="dashboard">
-        <div>Name: <strong><span class="name"></span></strong></div>
-        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
-        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
-        <div>Feelings: <strong><span class="check"></span> (Check my feelings)</strong></div>
+        <div>
+          Name: <strong><span class="name"></span></strong>
+        </div>
+        <div>
+          Weight: <strong><span class="weight"></span> pounds</strong>
+        </div>
+        <div>
+          Happiness:
+          <strong><span class="happiness"></span> tail wags (per min)</strong>
+        </div>
+        <!-- Adding the attribute related to the check button -->
+        <div>
+          Feelings:
+          <strong><span class="check"></span> (Check my feelings) </strong>
+        </div>
         <div class="button-container">
-          <button class="treat-button"
-             onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2Fjerry_eat.gif?v=1604558492523'" width="480" height="350">
+          <!-- I have added onclick to change the pet-image for each button -->
+          <button
+            class="treat-button"
+            onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2Fjerry_eat.gif?v=1604558492523'"
+          >
             Treat
           </button>
-          <button class="play-button" 
-                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2FAnxiousKaleidoscopicCricket-max-1mb.gif?v=1604561171220'" >
+          <button
+            class="play-button"
+            onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2FAnxiousKaleidoscopicCricket-max-1mb.gif?v=1604561171220'"
+          >
             Play
           </button>
-          <button class="exercise-button"
-                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F5deb8d33e8d108a01a935e2868628d95.jpg?v=1604558631261'" >
+          <button
+            class="exercise-button"
+            onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F5deb8d33e8d108a01a935e2868628d95.jpg?v=1604558631261'"
+          >
             Exercise
           </button>
-          <button class="song-button"
-                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605'">
+
+          <!-- This is an extra button which is used to play a tom and jerry theme song -->
+          <button
+            class="song-button"
+            onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605'"
+          >
             Song
-            </button>
-                    <button class="check-button"
-                  onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605'">
+          </button>
+
+          <!-- This is anoteher extra button. It is used for checking what the pet wants -->
+          <button
+            class="check-button"
+            onclick="document.getElementById('pet-image').src='https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2F513ApFj6QgL._AC_.jpg?v=1604541972605'"
+          >
             Check
-            </button>
+          </button>
         </div>
-                <br>
+        <!-- This is used for pet's comment -->
+        <br />
         <p id="comment"></p>
       </section>
     </main>
 
     <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Adding the sounds here which will be called in the js file -->
+    <audio
+      id="sound1"
+      src="https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2FCartoon-Chipmunk-Riser-Toy-www.fesliyanstudios.com.mp3?v=1604601397669"
+    ></audio>
+    <!-- Treat -->
+    <audio
+      id="sound2"
+      src="https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2FFunny-Laugh-A4-www.fesliyanstudios.com.mp3?v=1604601519980"
+    ></audio>
+    <!-- Play -->
+    <audio
+      id="sound3"
+      src="https://cdn.glitch.com/f42c3be2-22c5-4a17-aa4b-5ccbe05c233e%2FSad-Violin-A-www.fesliyanstudios.com.mp3?v=1604601628064"
+    ></audio>
   </body>
 </html>
